@@ -165,6 +165,12 @@
                       data-feather="arrow-right"></i></div>
                 </div>
               </nav>
+              <style>
+                .required:after {
+                content:" *";
+                color: red;
+              }
+          </style>
             </header>
             <!-- Page Sidebar Ends-->
             <div class="page-body">
@@ -197,9 +203,11 @@
                             Letter,Permission of your
                             Organisation/Service,Official Approval Certificate
                             for coming to Bangladesh (if any) are to be attached
-                            .</li>
+                            .  <a class="btn btn-primary"
+                            href="passport.html">Click Here</a></li>
                           <li>Any other documents (as deemed necessary or as
-                            applicable) may be attached.</li> </span>
+                            applicable) may be attached. <a class="btn btn-primary"
+                            href="passport.html">Click Here</a></li> </span>
                         <br>
                         <div>
                           <span><h6>Color PP Size Photo to be Pasted:</h6></span>
@@ -208,6 +216,7 @@
 
                         </div>
                       </div>
+                      
                       <div class="card-body">
                         <span><h6>NAME DETAILS:</h6></span>
                         <form class="needs-validation" novalidate="">
@@ -215,7 +224,7 @@
                             <div class="col">
                               <div class="mb-3">
                                 <div class="form-group">
-                                  <label class="control-label">Full Name(Block
+                                  <label class="control-label required">Full Name(Block
                                     Capital)</label>
                                   <input class="form-control" type="text"
                                     placeholder="">
@@ -274,7 +283,7 @@
                           <br>
                           <div class="row g-3">
                             <label class="form-label"
-                              for="validationDefault01">Nationality/Citizenship:</label>
+                              for="validationDefault01">Nationality/Citizenship:(Mention all in case of Multiple Citizenship)</label>
                             <div class="col-md-4">
 
                               <input class="form-control"
@@ -294,105 +303,8 @@
                           </div>
 
                           <br>
-                          <div class="row g-3">
-                            <label class="form-label"
-                              for="validationDefault01">Email Address</label>
-                            <div class="col-md-4">
-
-                              <input class="form-control"
-                                id="validationDefault01" type="text"
-                                placeholder="a">
-                            </div>
-                            <div class="col-md-4">
-                              <input class="form-control"
-                                id="validationDefault02" type="text"
-                                placeholder="b">
-                            </div>
-                            <div class="col-md-4">
-                              <input class="form-control"
-                                id="validationDefault01" type="text"
-                                placeholder="c">
-                            </div>
-                          </div>
-                          <br>
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <label class="control-label">Mobile/Cell No in
-                                    Bangladesh (if available)</label>
-                                  <input class="form-control" type="text"
-                                    placeholder="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <label class="control-label">Mobile/Cell No
-                                    (in
-                                    Your Country)</label>
-                                  <input class="form-control" type="text"
-                                    placeholder="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <label class="control-label">Landline No (in
-                                    Your Country)</label>
-                                  <input class="form-control" type="text"
-                                    placeholder="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <label class="control-label">Person to be
-                                    Notified in Case of Emergency (in
-                                    Your Country)</label>
-                                  <input class="form-control" type="text"
-                                    placeholder="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <label class="control-label">Next of Kin</label>
-                                  <input class="form-control" type="text"
-                                    placeholder="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <label class="control-label">Relationship</label>
-                                  <input class="form-control" type="text"
-                                    placeholder="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <br>
+                         
+                        
                           <div class="row">
                             <div class="col">
                               <div class="mb-3">
@@ -445,15 +357,7 @@
                             </div>
                           </div>
                           <br>
-                          <div>
-                            <label class="col-md-4 col-form-label">Pen Picture
-                              (pl
-                              add additional sheets as necessary)</label>
-                            <input class="form-control" type="file"
-                              aria-label="file example">
-
-                          </div>
-
+                         
                         </form>
                       </div>
                     </div>
@@ -541,32 +445,7 @@
                           </div>
 
 
-                          <div class="row">
-                            <div class="col">
-                              <div class="mb-3">
-                                <div class="form-group">
-                                  <input type="radio" class="radioBtn"
-                                    name="Radio" id="Radio" value="ABC"><span
-                                    style="color:
-                                    black;font-weight: 600;">Unmarried</span>
-                                  <input class="radioBtn" type="radio"
-                                    name="Radio" id="Radio" value="PQR">
-                                  <span style="color:
-                                    black;font-weight: 600;">Married</span>
-                                  <div class="Box" style="display:none">
-                                    <div class="form-group">
-                                      <label class="col-md-4
-                                        col-form-label">
-                                      </label>
-
-                                      <input class="form-control digits"
-                                        type="date">
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        
 
                           <div class="row">
                             <div class="col">
@@ -696,7 +575,7 @@
                                       <tr>
                                         <td colspan="4" class="text-right"><button
                                             type="button" class="btn btn-info"
-                                            @click="addNewField()">+ Add Row</button></td>
+                                            @click="addNewField()">+ Add </button></td>
                                       </tr>
                                     </tfoot>
                                   </table>
@@ -768,7 +647,7 @@
                                       <tr>
                                         <td colspan="4" class="text-right"><button
                                             type="button" class="btn btn-info"
-                                            @click="addNewField()">+ Add Row</button></td>
+                                            @click="addNewField()">+ Add </button></td>
                                       </tr>
                                     </tfoot>
                                   </table>
@@ -825,7 +704,7 @@
                                       <tr>
                                         <td colspan="4" class="text-right"><button
                                             type="button" class="btn btn-info"
-                                            @click="addNewField()">+ Add Row</button></td>
+                                            @click="addNewField()">+ Add </button></td>
                                       </tr>
                                     </tfoot>
                                   </table>
@@ -883,7 +762,7 @@
                                       <tr>
                                         <td colspan="4" class="text-right"><button
                                             type="button" class="btn btn-info"
-                                            @click="addNewField()">+ Add Row</button></td>
+                                            @click="addNewField()">+ Add </button></td>
                                       </tr>
                                     </tfoot>
                                   </table>
@@ -895,10 +774,9 @@
                       </div>
                     </div>
                     <!-- end others -->
-                    <a class="btn btn-primary"
-                      href="login.html">Previous</a>
-                    <a class="btn btn-primary" href="service.html"
-                      style="margin-left: 775px;">Next</a>
+                    
+                    <a class="btn btn-primary" href=""
+                      style="margin-left: 500px;">Save and Continue</a>
                   </div>
                 </div>
               </div>

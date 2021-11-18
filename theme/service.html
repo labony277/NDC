@@ -327,7 +327,57 @@
                                       <tr>
                                         <td colspan="4" class="text-right"><button
                                             type="button" class="btn btn-info"
-                                            @click="addNewField()">+ Add Row</button></td>
+                                            @click="addNewField()">+ Add</button></td>
+                                      </tr>
+                                    </tfoot>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row" x-data="handler()">
+                            <div class="col">
+                              <div class="mb-3">
+                                <div class="form-group">
+                                  <label class="control-label">Countries You Visited Previously (last 5 years)</label>
+                                  <table class="table table-bordered
+                                    align-items-center table-sm">
+                                    <thead class="thead-light">
+                                      <tr>
+                                        <th>Ser</th>
+                                        <th>Country</th>
+                                        <th>Purpose of Visit</th>
+                                        <th>Duration/ Year </th>
+                                        <th>Remove</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <template x-for="(field, index) in fields"
+                                        :key="index">
+                                        <tr>
+                                          <td x-text="index + 1"></td>
+                                          <td><input x-model="field.txt1"
+                                              type="text" name="last_country[]"
+                                              class="form-control"></td>
+                                          <td><input x-model="field.txt2"
+                                              type="text" name="last_purpose[]"
+                                              class="form-control"></td>
+                                          <td><input x-model="field.txt3"
+                                              type="text" name="last_duration[]"
+                                              class="form-control"></td>
+                                          
+                                          <td><button type="button" class="btn
+                                              btn-danger btn-small"
+                                              @click="removeField(index)">&times;</button></td>
+                                        </tr>
+                                      </template>
+                                    </tbody>
+                                    <tfoot>
+                                      <tr>
+                                        <td colspan="4" class="text-right"><button
+                                            type="button" class="btn btn-info"
+                                            @click="addNewField()">+ Add </button></td>
                                       </tr>
                                     </tfoot>
                                   </table>
@@ -336,15 +386,12 @@
                             </div>
                           </div>
 
-
                         </form>
                       </div>
                     </div>
                     <!-- end personal details -->
-                    <a class="btn btn-primary"
-                      href="personal_information.html">Previous</a>
-                    <a class="btn btn-primary"href="personal.html"
-                      style="margin-left: 775px;">Next</a>
+                    <a class="btn btn-primary" href=""
+                      style="margin-left: 500px;">Save and Continue</a>
 
                   </div>
                 </div>

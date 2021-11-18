@@ -200,23 +200,22 @@
          </div>
          <div class="card-body">
          <form>
-         
-        
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label">Name (EXactly as in the Passport</label>
-         <input
-            class="form-control"
-            type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
+         <div class="row g-3">
+            <label class="form-label"
+              for="validationDefault01">Name (EXactly as in the Passport:</label>
+            <div class="col-md-6">
+
+              <input class="form-control"
+                id="validationDefault01" type="text"
+                placeholder="SurName">
+            </div>
+            <div class="col-md-6">
+              <input class="form-control"
+                id="validationDefault02" type="text"
+                placeholder="Given Name">
+            </div>
+          
+          </div>
          <br>
          <div class="row">
          <div class="col">
@@ -345,9 +344,15 @@
                    :key="index">
                 <tr>
                 <td x-text="index + 1"></td>
-                <td><input x-model="field.txt1"
-                   type="text" name="spouse_name[]"
-                   class="form-control"></td>
+                <td><div class="row">
+                  <input x-model="field.txt1"
+                  type="text" name="spouse_name[]"
+                  class="form-control" id="validationDefault01"  placeholder="Sure Name"
+                 > <input x-model="field.txt1"
+                 type="text" name="spouse_name[]"
+                 class="form-control" id="validationDefault01"  placeholder="Given Name"
+                > 
+                </div></td>
                 <td><input x-model="field.txt2"
                    type="text" name="Spouse_passport_no[]"
                    class="form-control"></td>
@@ -389,7 +394,7 @@
                 <tr>
                 <td colspan="4" class="text-right"><button
                    type="button" class="btn btn-info"
-                   @click="addNewField()">+ Add Row</button></td>
+                   @click="addNewField()">+ Add </button></td>
                 </tr>
                 </tfoot>
                 </table>
@@ -435,8 +440,8 @@
                    <tr>
                    <td x-text="index + 1"></td>
                    <td><input x-model="field.txt1"
-                      type="text" name="children_name[]"
-                      class="form-control"></td>
+                     type="text" name="children_name[]"
+                     class="form-control"></td>
                    <td><input x-model="field.txt2"
                       type="text" name="children_passport_no[]"
                       class="form-control"></td>
@@ -478,7 +483,7 @@
                    <tr>
                    <td colspan="4" class="text-right"><button
                       type="button" class="btn btn-info"
-                      @click="addNewField()">+ Add Row</button></td>
+                      @click="addNewField()">+ Add </button></td>
                    </tr>
                    </tfoot>
                    </table>
@@ -533,26 +538,56 @@
             </div>
             </div>
             <br>
-            
-            
+            <div class="row g-3">
+               <label class="form-label"
+                 for="validationDefault01">Email Address: (If any backup Email Account Exist)</label>
+               <div class="col-md-4">
+
+                 <input class="form-control"
+                   id="validationDefault01" type="text"
+                   placeholder="a">
+               </div>
+               <div class="col-md-4">
+                 <input class="form-control"
+                   id="validationDefault02" type="text"
+                   placeholder="b">
+               </div>
+               <div class="col-md-4">
+                 <input class="form-control"
+                   id="validationDefault01" type="text"
+                   placeholder="c">
+               </div>
+             </div>
+             <br>
             <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="col-md-4
-               col-form-label">Date
-            Of Marriage
-          </label>
-            <input
-               class="form-control
-               digits"
-               type="date">
-            </div>
-            </div>
-            </div>
-            </div>
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <input type="radio" class="radioBtn"
+                       name="Radio" id="Radio" value="ABC"><span
+                       style="color:
+                       black;font-weight: 600;">Unmarried</span>
+                     <input class="radioBtn" type="radio"
+                       name="Radio" id="Radio" value="PQR">
+                     <span style="color:
+                       black;font-weight: 600;">Married</span>
+                     <div class="Box" style="display:none">
+                       <div class="form-group">
+                         <label class="col-md-4
+                           col-form-label">
+                         </label>
+
+                         <input class="form-control digits"
+                           type="date">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            <br>
+            
+            
             <br>
             <div class="row">
             <div class="col">
@@ -604,8 +639,181 @@
                 </div>
                 </div>
                 </div>
-           
-               
+              <br>
+              <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                    <h6>Do you have Children?</h6>
+                   <div class="form-group">
+                     <input type="radio" class="radioBtn"
+                       name="Radio" id="Radio" value="ABC"><span
+                       style="color:
+                       black;font-weight: 600;">No</span>
+                     <input class="radioBtn" type="radio"
+                       name="Radio" id="Radio" value="PQR">
+                     <span style="color:
+                       black;font-weight: 600;">Yes</span>
+                     <div class="Box" style="display:none">
+                        <div class="card-header pb-0">
+                           <h5>CHILDREN DETAILS:</h5>
+                           </div>
+                           <form class="form theme-form">
+                           <div class="card-body">
+                              <div class="row" x-data="handler()">
+                                  <div class="col">
+                                  <div class="mb-3">
+                                  <div class="form-group">
+                                 
+                                  <table class="table table-bordered
+                                     align-items-center table-sm">
+                                  <thead class="thead-light">
+                                  <tr>
+                                  <th>Ser</th>
+                                  <th>Name  </th>
+                                  <th>Age</th>
+                                  <th>Date   of   Birth</th>
+                                  <th>Class</th>
+                                  <th>Name of School / College / University</th>
+                                  <th>Remove</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <template x-for="(field, index) in fields"
+                                     :key="index">
+                                  <tr>
+                                  <td x-text="index + 1"></td>
+                                  <td><input x-model="field.txt1"
+                                     type="text" name="children_details_name[]"
+                                     class="form-control"></td>
+                                  <td><input x-model="field.txt2"
+                                     type="text" name="children_age[]"
+                                     class="form-control"></td>
+                                  <td><input x-model="field.txt3"
+                                     type="date" name="children_date_details[]"
+                                     class="form-control"></td>
+                                  <td><input x-model="field.txt4"
+                                     type="text" name="children_class[]"
+                                     class="form-control"></td>
+                                  <td><input x-model="field.txt5"
+                                     type="text"
+                                     name="children_school_college[]"
+                                     class="form-control"></td>
+                                  
+                                  <td><button type="button" class="btn
+                                     btn-danger btn-small"
+                                     @click="removeField(index)">&times;</button></td>
+                                  </tr>
+                                  </template>
+                                  </tbody>
+                                  <tfoot>
+                                  <tr>
+                                  <td colspan="4" class="text-right"><button
+                                     type="button" class="btn btn-info"
+                                     @click="addNewField()">+ Add </button></td>
+                                  </tr>
+                                  </tfoot>
+                                  </table>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                           
+                           
+                           </div>
+                           </form>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+              <br>
+              <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <label class="control-label">Mobile/Cell No in
+                       Bangladesh (if available)</label>
+                     <input class="form-control" type="text"
+                       placeholder="">
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <label class="control-label">Mobile/Cell No
+                       (in
+                       Your Country)</label>
+                     <input class="form-control" type="text"
+                       placeholder="Mention Country Code">
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <label class="control-label">Landline No (in
+                       Your Country)</label>
+                     <input class="form-control" type="text"
+                       placeholder="Mention Country Code">
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <label class="control-label">Person to be
+                       Notified in Case of Emergency (in
+                       Your Country)</label>
+                     <input class="form-control" type="text"
+                       placeholder="">
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <label class="control-label">Next of Kin (NOK)</label>
+                     <input class="form-control" type="text"
+                       placeholder="Name">
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col">
+                 <div class="mb-3">
+                   <div class="form-group">
+                     <label class="control-label">Relationship between User and NOK</label>
+                     <input class="form-control" type="text"
+                       placeholder="">
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div>
+               <label class="col-md-4 col-form-label">Pen Picture
+                 (pl
+                 add additional sheets as necessary)</label>
+               <input class="form-control" type="file"
+                 aria-label="file example">
+
+             </div>
+
             </form>
             </div>
             </div>
@@ -654,77 +862,7 @@
             </div>
             </div>
             <!-- end Parents -->
-             <!-- children details -->
-         <div class="card">
-            <div class="card-header pb-0">
-            <h5>CHILDREN DETAILS:</h5>
-            </div>
-            <form class="form theme-form">
-            <div class="card-body">
-               <div class="row" x-data="handler()">
-                   <div class="col">
-                   <div class="mb-3">
-                   <div class="form-group">
-                  
-                   <table class="table table-bordered
-                      align-items-center table-sm">
-                   <thead class="thead-light">
-                   <tr>
-                   <th>Ser</th>
-                   <th>Name  </th>
-                   <th>Age</th>
-                   <th>Date   of   Birth</th>
-                   <th>Class</th>
-                   <th>Name of School / College / University</th>
-                   <th>Remove</th>
-                   </tr>
-                   </thead>
-                   <tbody>
-                   <template x-for="(field, index) in fields"
-                      :key="index">
-                   <tr>
-                   <td x-text="index + 1"></td>
-                   <td><input x-model="field.txt1"
-                      type="text" name="children_details_name[]"
-                      class="form-control"></td>
-                   <td><input x-model="field.txt2"
-                      type="text" name="children_age[]"
-                      class="form-control"></td>
-                   <td><input x-model="field.txt3"
-                      type="date" name="children_date_details[]"
-                      class="form-control"></td>
-                   <td><input x-model="field.txt4"
-                      type="text" name="children_class[]"
-                      class="form-control"></td>
-                   <td><input x-model="field.txt5"
-                      type="text"
-                      name="children_school_college[]"
-                      class="form-control"></td>
-                   
-                   <td><button type="button" class="btn
-                      btn-danger btn-small"
-                      @click="removeField(index)">&times;</button></td>
-                   </tr>
-                   </template>
-                   </tbody>
-                   <tfoot>
-                   <tr>
-                   <td colspan="4" class="text-right"><button
-                      type="button" class="btn btn-info"
-                      @click="addNewField()">+ Add Row</button></td>
-                   </tr>
-                   </tfoot>
-                   </table>
-                   </div>
-                   </div>
-                   </div>
-                   </div>
-            
-            
-            </div>
-            </form>
-            </div>
-            <!-- end children details -->
+           
                <!-- publications details -->
          <div class="card">
             <div class="card-header pb-0">
@@ -777,7 +915,7 @@
                    <tr>
                    <td colspan="4" class="text-right"><button
                       type="button" class="btn btn-info"
-                      @click="addNewField()">+ Add Row</button></td>
+                      @click="addNewField()">+ Add </button></td>
                    </tr>
                    </tfoot>
                    </table>
@@ -878,27 +1016,57 @@
                         </div>
                         <br>
                         <div class="row">
+                           <div class="col">
+                           <div class="mb-3">
+                           <div
+                              class="form-group">
+                           <label
+                              class="control-label"> 1* Family group photograph (4R Size)</label>
+                           <input class="form-control" type="file"
+                             aria-label="file example">
+                           </div>
+                       </div>
+                       </div>
+                       </div>
+                        <br>
+                        <div class="row">
                             <div class="col">
                             <div class="mb-3">
                             <div
                                class="form-group">
                             <label
-                               class="control-label">1* Family group Photograph  (4R Size)</label>
+                               class="control-label">Photocopy of Passport,VISA pages,Invitation
+                               Letter,Permission of your
+                               Organisation/Service,Official Approval Certificate
+                               for coming to Bangladesh (if any) are to be attached</label>
                             <input class="form-control" type="file"
                               aria-label="file example">
                             </div>
                         </div>
                         </div>
                         </div>
+                        <br>
+                        <div class="row">
+                           <div class="col">
+                           <div class="mb-3">
+                           <div
+                              class="form-group">
+                           <label
+                              class="control-label">Any other documents (as deemed necessary or as
+                              applicable) may be attached</label>
+                           <input class="form-control" type="file"
+                             aria-label="file example">
+                           </div>
+                       </div>
+                       </div>
+                       </div>
                      
             </div>
             </form>
             </div>
             <!-- end publications details -->
-            <a class="btn btn-primary"
-            href="personal.html">Previous</a>
-            <a class="btn btn-primary "
-            href="passport.html" style="margin-left: 775px;">Next</a>
+            <a class="btn btn-primary" href=""
+                      style="margin-left: 500px;">Save and Continue</a>
 
          
          </div>
