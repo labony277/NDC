@@ -174,6 +174,12 @@
                         data-feather="arrow-right"></i></div>
                   </div>
             </nav>
+            <style>
+               .required:after {
+               content:" *";
+               color: red;
+             }
+         </style>
          </header>
          <!-- Page Sidebar Ends-->
          <div class="page-body">
@@ -201,8 +207,8 @@
          <div class="card-body">
          <form>
          <div class="row g-3">
-            <label class="form-label"
-              for="validationDefault01">Name (EXactly as in the Passport:</label>
+            <label class="form-label required"
+              for="validationDefault01 ">26. Name (EXactly as in the Passport:</label>
             <div class="col-md-6">
 
               <input class="form-control"
@@ -223,7 +229,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Passport No</label>
+            class="control-label required">27. Passport No</label>
          <input
             class="form-control"
             type="text"
@@ -242,7 +248,7 @@
             class="form-group">
          <label
             class="col-md-4
-            col-form-label">Date
+            col-form-label required">28. Date
          Of
          Issue</label>
          <input
@@ -262,7 +268,7 @@
          <label
             class="col-md-4
             col-form-label">
-         Expiry Date</label>
+         29. Expiry Date</label>
          <input
             class="form-control
             digits"
@@ -279,7 +285,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Place of Issue</label>
+            class="control-label required">30.  Place of Issue</label>
          <input
             class="form-control"
             type="text"
@@ -291,7 +297,7 @@
          <br>
          <div class="mb-2">
             <label
-               class="col-form-label">Type of passport </label>
+               class="col-form-label required">31. Type of passport </label>
             <select
                class="js-example-basic-single
                col-sm-12">
@@ -316,7 +322,7 @@
          <!-- dual passport -->
          <div class="card">
          <div class="card-header pb-0">
-         <h5>SPOUSE (Incase of Dual Passport Mention details of both):</h5>
+         <h5 class="required">32. SPOUSE (Incase of Dual Passport Mention details of both):</h5>
          </div>
          <form class="form theme-form">
          <div class="card-body">
@@ -411,7 +417,7 @@
          <!-- children1 -->
          <div class="card">
             <div class="card-header pb-0">
-            <h5>CHILDREN:</h5>
+            <h5 class="required">33. CHILDREN:</h5>
             </div>
             <form class="form theme-form">
             <div class="card-body">
@@ -500,7 +506,7 @@
           <!-- starts spouse familiar-->
          <div class="card">
             <div class="card-header pb-0">
-            <h5>SPOUSE:</h5>
+            <h5>34. SPOUSE:</h5>
             </div>
             <div class="card-body">
             <form>
@@ -512,7 +518,7 @@
             <div
                class="form-group">
             <label
-               class="control-label">Full Name of Spouse</label>
+               class="control-label required">Full Name of Spouse</label>
             <input
                class="form-control"
                type="text"
@@ -528,7 +534,7 @@
             <div
                class="form-group">
             <label
-               class="control-label">Familiar Name (Nickname ) She/He is Known</label>
+               class="control-label required">Familiar Name (Nickname ) She/He is Known</label>
             <input
                class="form-control"
                type="text"
@@ -540,7 +546,7 @@
             <br>
             <div class="row g-3">
                <label class="form-label"
-                 for="validationDefault01">Email Address: (If any backup Email Account Exist)</label>
+                 for="validationDefault01 required">Email Address: (If any backup Email Account Exist)</label>
                <div class="col-md-4">
 
                  <input class="form-control"
@@ -596,7 +602,7 @@
                class="form-group">
             <label
                class="col-md-4
-               col-form-label">
+               col-form-label required">
              Date of Birth</label>
             <input
                class="form-control
@@ -614,7 +620,7 @@
             <div
                class="form-group">
             <label
-               class="control-label">Educational Qualification</label>
+               class="control-label required">Educational Qualification</label>
             <input
                class="form-control"
                type="text"
@@ -630,7 +636,7 @@
                 <div
                    class="form-group">
                 <label
-                   class="control-label">Blood Group</label>
+                   class="control-label required">Blood Group</label>
                 <input
                    class="form-control"
                    type="text"
@@ -643,7 +649,7 @@
               <div class="row">
                <div class="col">
                  <div class="mb-3">
-                    <h6>Do you have Children?</h6>
+                    <h6>35. Do you have Children?</h6>
                    <div class="form-group">
                      <input type="radio" class="radioBtn"
                        name="Radio" id="Radio" value="ABC"><span
@@ -655,7 +661,7 @@
                        black;font-weight: 600;">Yes</span>
                      <div class="Box" style="display:none">
                         <div class="card-header pb-0">
-                           <h5>CHILDREN DETAILS:</h5>
+                           <h5 class="required">CHILDREN DETAILS:</h5>
                            </div>
                            <form class="form theme-form">
                            <div class="card-body">
@@ -731,7 +737,7 @@
                <div class="col">
                  <div class="mb-3">
                    <div class="form-group">
-                     <label class="control-label">Mobile/Cell No in
+                     <label class="control-label required">36. Mobile/Cell No in
                        Bangladesh (if available)</label>
                      <input class="form-control" type="text"
                        placeholder="">
@@ -744,7 +750,7 @@
                <div class="col">
                  <div class="mb-3">
                    <div class="form-group">
-                     <label class="control-label">Mobile/Cell No
+                     <label class="control-label required">37. Mobile/Cell No
                        (in
                        Your Country)</label>
                      <input class="form-control" type="text"
@@ -758,7 +764,7 @@
                <div class="col">
                  <div class="mb-3">
                    <div class="form-group">
-                     <label class="control-label">Landline No (in
+                     <label class="control-label required">38. Landline No (in
                        Your Country)</label>
                      <input class="form-control" type="text"
                        placeholder="Mention Country Code">
@@ -771,7 +777,7 @@
                <div class="col">
                  <div class="mb-3">
                    <div class="form-group">
-                     <label class="control-label">Person to be
+                     <label class="control-label required">39. Person to be
                        Notified in Case of Emergency (in
                        Your Country)</label>
                      <input class="form-control" type="text"
@@ -785,7 +791,7 @@
                <div class="col">
                  <div class="mb-3">
                    <div class="form-group">
-                     <label class="control-label">Next of Kin (NOK)</label>
+                     <label class="control-label required">40. Next of Kin (NOK)</label>
                      <input class="form-control" type="text"
                        placeholder="Name">
                    </div>
@@ -797,7 +803,7 @@
                <div class="col">
                  <div class="mb-3">
                    <div class="form-group">
-                     <label class="control-label">Relationship between User and NOK</label>
+                     <label class="control-label required">41. Relationship between User and NOK</label>
                      <input class="form-control" type="text"
                        placeholder="">
                    </div>
@@ -806,7 +812,7 @@
              </div>
              <br>
              <div>
-               <label class="col-md-4 col-form-label">Pen Picture
+               <label class="col-md-4 col-form-label required">42. Pen Picture
                  (pl
                  add additional sheets as necessary)</label>
                <input class="form-control" type="file"
@@ -821,7 +827,7 @@
              <!-- starts Parents-->
          <div class="card">
             <div class="card-header pb-0">
-            <h5>Name of Parents:</h5>
+            <h5 class="required">43. Name of Parents:</h5>
             </div>
             <div class="card-body">
             <form>
@@ -866,7 +872,7 @@
                <!-- publications details -->
          <div class="card">
             <div class="card-header pb-0">
-            <h5>LIST OF PUBLICSTIONS YOU HAVE ON YOUR CREDIT,IF ANY:</h5>
+            <h5 class="required">44. LIST OF PUBLICSTIONS YOU HAVE ON YOUR CREDIT,IF ANY:</h5>
             </div>
             <form class="form theme-form">
             <div class="card-body">
@@ -930,7 +936,7 @@
                    <div
                       class="form-group">
                    <label
-                      class="control-label"> Number of Family Members</label>
+                      class="control-label required"> 45. Number of Family Members</label>
                    <input
                       class="form-control"
                       type="text"
@@ -946,7 +952,7 @@
                     <div
                        class="form-group">
                     <label
-                       class="control-label">Date of Arrival of Family members</label>
+                       class="control-label required">46. Date of Arrival of Family members</label>
                     <input
                        class="form-control"
                        type="date"
@@ -962,7 +968,7 @@
                         <div
                            class="form-group">
                         <label
-                           class="control-label">Duration of Stay of Family Members</label>
+                           class="control-label required">47. Duration of Stay of Family Members</label>
                         <input
                            class="form-control"
                            type="text"
@@ -979,7 +985,7 @@
                             <div
                                class="form-group">
                             <label
-                               class="control-label">Any other Information : Signature :</label>
+                               class="control-label required">48. Any other Information : Signature :</label>
                             <input class="form-control" type="file"
                               aria-label="file example">
                             </div>
@@ -993,7 +999,7 @@
                             <div
                                class="form-group">
                             <label
-                               class="control-label">Please Enclose 1* Passport Size Photograph with Uniform (own)</label>
+                               class="control-label required">49. Please Enclose 1* Passport Size Photograph with Uniform (own)</label>
                             <input class="form-control" type="file"
                               aria-label="file example">
                             </div>
@@ -1007,7 +1013,7 @@
                             <div
                                class="form-group">
                             <label
-                               class="control-label"> 1* Passport Size Photograph  (Spouse)</label>
+                               class="control-label required">50.  1* Passport Size Photograph  (Spouse)</label>
                             <input class="form-control" type="file"
                               aria-label="file example">
                             </div>
@@ -1021,7 +1027,7 @@
                            <div
                               class="form-group">
                            <label
-                              class="control-label"> 1* Family group photograph (4R Size)</label>
+                              class="control-label required">51.  1* Family group photograph (4R Size)</label>
                            <input class="form-control" type="file"
                              aria-label="file example">
                            </div>
@@ -1035,7 +1041,7 @@
                             <div
                                class="form-group">
                             <label
-                               class="control-label">Photocopy of Passport,VISA pages,Invitation
+                               class="control-label required">52. Photocopy of Passport,VISA pages,Invitation
                                Letter,Permission of your
                                Organisation/Service,Official Approval Certificate
                                for coming to Bangladesh (if any) are to be attached</label>
@@ -1052,7 +1058,7 @@
                            <div
                               class="form-group">
                            <label
-                              class="control-label">Any other documents (as deemed necessary or as
+                              class="control-label required">53. Any other documents (as deemed necessary or as
                               applicable) may be attached</label>
                            <input class="form-control" type="file"
                              aria-label="file example">

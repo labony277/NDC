@@ -174,6 +174,12 @@
                         data-feather="arrow-right"></i></div>
                   </div>
             </nav>
+            <style>
+               .required:after {
+               content:" *";
+               color: red;
+             }
+         </style>
          </header>
          <!-- Page Sidebar Ends-->
          <div class="page-body">
@@ -202,7 +208,7 @@
          <form>
          <div class="mb-2">
          <label
-            class="col-form-label">Rank</label>
+            class="col-form-label required">1. Rank</label>
          <select
             class="js-example-basic-single
             col-sm-12">
@@ -290,7 +296,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Batch/Course
+            class="control-label required">2. Batch/Course
          Number</label>
          <input
             class="form-control"
@@ -307,7 +313,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Name
+            class="control-label required">3. Name
          in
          Capital
          (As in
@@ -328,7 +334,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Short
+            class="control-label required">4. Short
          Name (As
          Nameplate)</label>
          <input
@@ -346,7 +352,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Name
+            class="control-label required">5. Name
          in
          Bangali
          (As in
@@ -373,7 +379,7 @@
             class="form-group">
          <label
             class="col-md-4
-            col-form-label">Date
+            col-form-label required">6. Date
          Of
          Commission
          Service
@@ -394,7 +400,7 @@
             class="form-group">
          <label
             class="col-md-4
-            col-form-label">Date
+            col-form-label required">7. Date
          Of
          Promotion
          to
@@ -416,7 +422,7 @@
             class="form-group">
          <label
             class="col-md-4
-            col-form-label">Date
+            col-form-label required">8. Date
          Of
          Birth</label>
          <input
@@ -434,7 +440,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Nationality</label>
+            class="control-label required">9. Nationality</label>
          <input
             class="form-control"
             type="text"
@@ -450,7 +456,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Blood
+            class="control-label required">10. Blood
          Group</label>
          <input
             class="form-control"
@@ -467,7 +473,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Height
+            class="control-label required">11. Height
          in CM</label>
          <input
             class="form-control"
@@ -484,7 +490,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Religion</label>
+            class="control-label required">12. Religion</label>
          <input
             class="form-control"
             type="text"
@@ -500,7 +506,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Marital
+            class="control-label required">13. Marital
          Status</label>
          <input
             class="form-control"
@@ -518,7 +524,7 @@
             class="form-group">
          <label
             class="col-md-4
-            col-form-label">Date
+            col-form-label required">14. Date
          Of
          Marriage</label>
          <input
@@ -536,7 +542,7 @@
          <!-- permanent Address -->
          <div class="card">
          <div class="card-header pb-0">
-         <h5>PERMANENT ADDRESS:</h5>
+         <h5>15. PERMANENT ADDRESS:</h5>
          </div>
          <form class="form theme-form">
          <div class="card-body">
@@ -546,7 +552,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">House
+            col-form-label required">House
          No/Village
          </label>
          <div
@@ -560,7 +566,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Road
+            col-form-label required">Road
          No/Union</label>
          <div
             class="col-sm-9">
@@ -573,7 +579,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Sector/Police
+            col-form-label required">Sector/Police
          Station</label>
          <div
             class="col-sm-9">
@@ -586,7 +592,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">District/Province</label>
+            col-form-label required">District/Province</label>
          <div
             class="col-sm-9">
          <input
@@ -598,7 +604,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Telephone
+            col-form-label required">Telephone
          No(Land
          Phone)</label>
          <div
@@ -612,7 +618,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Mobile
+            col-form-label required">Mobile
          Phone No
          1(Used in
          Own Country)</label>
@@ -627,7 +633,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Mobile
+            col-form-label required">Mobile
          Phone No
          2(Used in
          Own Country)</label>
@@ -642,7 +648,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Email
+            col-form-label required">Email
          Address</label>
          <div
             class="col-sm-9">
@@ -666,7 +672,7 @@
          <!-- present Address -->
          <div class="card">
          <div class="card-header pb-0">
-         <h5>PRESENT ADDRESS:</h5>
+         <h5 class="required">16. PRESENT ADDRESS:</h5>
         
          </div>
          <form class="form theme-form">
@@ -791,7 +797,7 @@
          <!-- contact Address -->
          <div class="card">
          <div class="card-header pb-0">
-         <h5>CONTACT ADDRESS at Home in
+         <h5>17. CONTACT ADDRESS at Home in
          Case Of Emergency:</h5>
          </div>
          <form class="form theme-form">
@@ -802,7 +808,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Name
+            col-form-label required">Name
          </label>
          <div
             class="col-sm-9">
@@ -815,7 +821,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Relation</label>
+            col-form-label required">Relation</label>
          <div
             class="col-sm-9">
          <input
@@ -827,7 +833,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Telephone
+            col-form-label required">Telephone
          no with
          District/Province
          Code</label>
@@ -842,7 +848,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Mobile
+            col-form-label required">Mobile
          Phone No 1</label>
          <div
             class="col-sm-9">
@@ -855,7 +861,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Mobile
+            col-form-label required">Mobile
          Phone No 2</label>
          <div
             class="col-sm-9">
@@ -885,7 +891,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Food
+            class="control-label required">18. Food
          Habits</label>
          <table
             class="table
@@ -944,7 +950,7 @@
             btn-info"
             @click="addNewField()">+
          Add
-         Row</button></td>
+         </button></td>
          </tr>
          </tfoot>
          </table>
@@ -960,7 +966,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Service</label>
+            class="control-label required">19. Service</label>
          <table
             class="table
             table-bordered
@@ -1010,7 +1016,7 @@
             btn-info"
             @click="addNewField()">+
          Add
-         Row</button></td>
+         </button></td>
          </tr>
          </tfoot>
          </table>
@@ -1025,7 +1031,7 @@
          <div
             class="form-group">
          <label
-            class="control-label">Hobbies</label>
+            class="control-label required">20. Hobbies</label>
          <table
             class="table
             table-bordered
@@ -1075,7 +1081,7 @@
             btn-info"
             @click="addNewField()">+
          Add
-         Row</button></td>
+         </button></td>
          </tr>
          </tfoot>
          </table>
@@ -1097,13 +1103,13 @@
          <div class="row">
          <div class="col">
          
-            <h6>High School Level or Equivalent:</h6>
+            <h6>21. High School Level or Equivalent:</h6>
         <br>
          <div class="mb-3
             row">
          <label
             class="col-sm-3
-            col-form-label">Name of Exam</label>
+            col-form-label required">Name of Exam</label>
          <div
             class="col-sm-9">
          <input
@@ -1115,7 +1121,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Year</label>
+            col-form-label required">Year</label>
          <div
             class="col-sm-9">
          <input
@@ -1127,7 +1133,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Name of Institution</label>
+            col-form-label required">Name of Institution</label>
          <div
             class="col-sm-9">
          <input
@@ -1139,7 +1145,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">ReSult</label>
+            col-form-label required">ReSult</label>
          <div
             class="col-sm-9">
          <input
@@ -1162,14 +1168,14 @@
          <div class="card-body">
          <div class="row">
          <div class="col">
-            <h6>College Level or Equivalent</h6>
+            <h6>22. College Level or Equivalent</h6>
         
          <br>
          <div class="mb-3
             row">
          <label
             class="col-sm-3
-            col-form-label">Name of Exam</label>
+            col-form-label required">Name of Exam</label>
          <div
             class="col-sm-9">
          <input
@@ -1181,7 +1187,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Year</label>
+            col-form-label required">Year</label>
          <div
             class="col-sm-9">
          <input
@@ -1193,7 +1199,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Name of Institution</label>
+            col-form-label required">Name of Institution</label>
          <div
             class="col-sm-9">
          <input
@@ -1205,7 +1211,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">ReSult</label>
+            col-form-label required">ReSult</label>
          <div
             class="col-sm-9">
          <input
@@ -1231,7 +1237,7 @@
          <div class="col">
          <div class="mb-3">
          <div class="form-group">
-         <label class="control-label">List of University Degrees of Equivalent Qualification</label>
+         <label class="control-label required">23. List of University Degrees of Equivalent Qualification</label>
          <table class="table table-bordered
             align-items-center table-sm">
          <thead class="thead-light">
@@ -1289,7 +1295,7 @@
          <div class="col">
          <div class="mb-3">
          <div class="form-group">
-         <label class="control-label">List of all Professional Courses Attended</label>
+         <label class="control-label required">24. List of all Professional Courses Attended</label>
          <table class="table table-bordered
             align-items-center table-sm">
          <thead class="thead-light">
@@ -1363,7 +1369,7 @@
          <div class="col">
          <div class="mb-3">
          <div class="form-group">
-         <label class="control-label">State Employment you had (in reverse order for last 10 years)</label>
+         <label class="control-label required">25. State Employment you had (in reverse order for last 10 years)</label>
          <table class="table table-bordered
             align-items-center table-sm">
          <thead class="thead-light">
@@ -1403,7 +1409,7 @@
          <tr>
          <td colspan="4" class="text-right"><button
             type="button" class="btn btn-info"
-            @click="addNewField()">+ Add Row</button></td>
+            @click="addNewField()">+ Add </button></td>
          </tr>
          </tfoot>
          </table>
