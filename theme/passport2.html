@@ -189,7 +189,7 @@
          <div class="page-header">
          <div class="row">
          <div class="col-sm-6">
-         <h3>DETAILS OF SPOUSE AND CHILDREN</h3>
+         <h3>DETAILS OF PASSPORT</h3>
          </div>
          <div class="col-sm-6">
          
@@ -202,7 +202,7 @@
          <div class="row">
          <div class="col-sm-12">
          <!-- starts official passport -->
-         <!-- <div class="card">
+         <div class="card">
          <div class="card-header pb-0">
          <h5>Own (Must be Official Passport):</h5>
          </div>
@@ -210,7 +210,7 @@
          <form>
          <div class="row g-3">
             <label class="form-label required"
-              for="validationDefault01 ">26. Name (EXactly as in the Passport:</label>
+              for="validationDefault01 ">37. Name (EXactly as in the Passport:</label>
             <div class="col-md-6">
 
               <input class="form-control"
@@ -231,7 +231,7 @@
          <div
             class="form-group">
          <label
-            class="control-label required">27. Passport No</label>
+            class="control-label required">38. Passport No</label>
          <input
             class="form-control"
             type="text"
@@ -250,7 +250,7 @@
             class="form-group">
          <label
             class="col-md-4
-            col-form-label required">28. Date
+            col-form-label required">39. Date
          Of
          Issue</label>
          <input
@@ -270,7 +270,7 @@
          <label
             class="col-md-4
             col-form-label">
-         29. Expiry Date</label>
+         40. Expiry Date</label>
          <input
             class="form-control
             digits"
@@ -287,7 +287,7 @@
          <div
             class="form-group">
          <label
-            class="control-label required">30.  Place of Issue</label>
+            class="control-label required">41.  Place of Issue</label>
          <input
             class="form-control"
             type="text"
@@ -299,7 +299,7 @@
          <br>
          <div class="mb-2">
             <label
-               class="col-form-label required">31. Type of passport </label>
+               class="col-form-label required">42. Type of passport </label>
             <select
                class="js-example-basic-single
                col-sm-12">
@@ -319,12 +319,12 @@
             
          </form>
          </div>
-         </div> -->
+         </div>
          <!-- end official passport -->
          <!-- dual passport -->
-         <!-- <div class="card">
+         <div class="card">
          <div class="card-header pb-0">
-         <h5 class="required">32. SPOUSE (Incase of Dual Passport Mention details of both):</h5>
+         <h5 class="required">43. SPOUSE (Incase of Dual Passport Mention details of both):</h5>
          </div>
          <form class="form theme-form">
          <div class="card-body">
@@ -414,12 +414,13 @@
          
          </div>
          </form>
-         </div> -->
-         <!-- end dual passport -->
-         <!-- children1 -->
+         </div>
+        
+           
+               <!-- publications details -->
          <div class="card">
             <div class="card-header pb-0">
-            <h5 class="required">26. CHILDREN:</h5>
+            <h5 class="required">44. LIST OF PUBLICSTIONS YOU HAVE ON YOUR CREDIT,IF ANY:</h5>
             </div>
             <form class="form theme-form">
             <div class="card-body">
@@ -433,12 +434,11 @@
                    <thead class="thead-light">
                    <tr>
                    <th>Ser</th>
-                   <th>Name (Exactly as in the Passport) </th>
-                   <th>Passport No</th>
-                   <th>Date   of   Issue</th>
-                   <th>Place of Issue</th>
-                   <th>Expiry   Date</th>
-                   <th>Type of Passport</th>
+                   <th> Subject / Name of Article  </th>
+                  
+                   <th>Publication Date</th>
+                   <th>Name of Journal/ Magazine</th>
+                   <th>Remarks </th>
                    <th>Remove</th>
                    </tr>
                    </thead>
@@ -448,39 +448,17 @@
                    <tr>
                    <td x-text="index + 1"></td>
                    <td><input x-model="field.txt1"
-                     type="text" name="children_name[]"
-                     class="form-control"></td>
+                      type="text" name="subject_artical[]"
+                      class="form-control"></td>
                    <td><input x-model="field.txt2"
-                      type="text" name="children_passport_no[]"
+                      type="date" name="publication_date[]"
                       class="form-control"></td>
                    <td><input x-model="field.txt3"
-                      type="date" name="children_date_issue[]"
+                      type="text" name="journal_magazine[]"
                       class="form-control"></td>
                    <td><input x-model="field.txt4"
-                      type="text" name="children_place_issue[]"
+                      type="text" name="publication_remarks[]"
                       class="form-control"></td>
-                   <td><input x-model="field.txt5"
-                      type="date"
-                      name="children_expiry[]"
-                      class="form-control"></td>
-                   <td><input x-model="field.txt6"
-                      type="text"
-                      name="children_type_passport[]"
-                      class="form-control"> <select
-                      class="js-example-basic-single
-                      col-sm-12">
-                   <optgroup label="">
-                   <option
-                      value="AL">Diplomatic</option>
-                   <option
-                      value="WY">Official</option>
-                   <option
-                      value="WY">Graits</option>
-                   <option
-                      value="WY">Private</option>
-                  
-                   </optgroup>
-                   </select></td>
                    <td><button type="button" class="btn
                       btn-danger btn-small"
                       @click="removeField(index)">&times;</button></td>
@@ -499,380 +477,148 @@
                    </div>
                    </div>
                    </div>
-            
-            
-            </div>
-            </form>
-            </div>
-            <!-- end children 1 -->
-          <!-- starts spouse familiar-->
-         <div class="card">
-            <div class="card-header pb-0">
-            <h5>27. SPOUSE:</h5>
-            </div>
-            <div class="card-body">
-            <form>
-            
-           
-            <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="control-label required">Full Name of Spouse</label>
-            <input
-               class="form-control"
-               type="text"
-               placeholder="">
-            </div>
-            </div>
-            </div>
-            </div>
-            <br>
-            <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="control-label required">Familiar Name (Nickname ) She/He is Known</label>
-            <input
-               class="form-control"
-               type="text"
-               placeholder="">
-            </div>
-            </div>
-            </div>
-            </div>
-            <br>
-            <div class="row g-3">
-               <label class="form-label"
-                 for="validationDefault01 required">Email Address: (If any backup Email Account Exist)</label>
-               <div class="col-md-4">
-
-                 <input class="form-control"
-                   id="validationDefault01" type="text"
-                   placeholder="a">
-               </div>
-               <div class="col-md-4">
-                 <input class="form-control"
-                   id="validationDefault02" type="text"
-                   placeholder="b">
-               </div>
-               <div class="col-md-4">
-                 <input class="form-control"
-                   id="validationDefault01" type="text"
-                   placeholder="c">
-               </div>
-             </div>
-             <br>
-            <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <input type="radio" class="radioBtn"
-                       name="Radio" id="Radio" value="ABC"><span
-                       style="color:
-                       black;font-weight: 600;">Unmarried</span>
-                     <input class="radioBtn" type="radio"
-                       name="Radio" id="Radio" value="PQR">
-                     <span style="color:
-                       black;font-weight: 600;">Married</span>
-                     <div class="Box" style="display:none">
-                       <div class="form-group">
-                         <label class="col-md-4
-                           col-form-label">
-                         </label>
-
-                         <input class="form-control digits"
-                           type="date">
+                   <br>
+                   <div class="row">
+                   <div class="col">
+                   <div class="mb-3">
+                   <div
+                      class="form-group">
+                   <label
+                      class="control-label required"> 45. Number of Family Members</label>
+                   <input
+                      class="form-control"
+                      type="text"
+                      placeholder="">
+                   </div>
+                   </div>
+                   </div>
+                   </div>
+                   <br>
+                   <div class="row">
+                    <div class="col">
+                    <div class="mb-3">
+                    <div
+                       class="form-group">
+                    <label
+                       class="control-label required">46. Date of Arrival of Family members</label>
+                    <input
+                       class="form-control"
+                       type="date"
+                       placeholder="">
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                        <div class="mb-3">
+                        <div
+                           class="form-group">
+                        <label
+                           class="control-label required">47. Duration of Stay of Family Members</label>
+                        <input
+                           class="form-control"
+                           type="text"
+                           placeholder="">
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <br>
+                        
+                        <div class="row">
+                            <div class="col">
+                            <div class="mb-3">
+                            <div
+                               class="form-group">
+                            <label
+                               class="control-label required">48. Any other Information : Signature :</label>
+                            <input class="form-control" type="file"
+                              aria-label="file example">
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <div class="mb-3">
+                            <div
+                               class="form-group">
+                            <label
+                               class="control-label required">49. Please Enclose 1* Passport Size Photograph with Uniform (own)</label>
+                            <input class="form-control" type="file"
+                              aria-label="file example">
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <div class="mb-3">
+                            <div
+                               class="form-group">
+                            <label
+                               class="control-label required">50.  1* Passport Size Photograph  (Spouse)</label>
+                            <input class="form-control" type="file"
+                              aria-label="file example">
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                           <div class="col">
+                           <div class="mb-3">
+                           <div
+                              class="form-group">
+                           <label
+                              class="control-label required">51.  1* Family group photograph (4R Size)</label>
+                           <input class="form-control" type="file"
+                             aria-label="file example">
+                           </div>
                        </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-            <br>
-            
-            
-            <br>
-            <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="col-md-4
-               col-form-label required">
-             Date of Birth</label>
-            <input
-               class="form-control
-               digits"
-               type="date">
-            </div>
-            </div>
-            </div>
-            </div>
-            <br>
-          
-            <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="control-label required">Educational Qualification</label>
-            <input
-               class="form-control"
-               type="text"
-               placeholder="">
-            </div>
-            </div>
-            </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                <div class="mb-3">
-                <div
-                   class="form-group">
-                <label
-                   class="control-label required">Blood Group</label>
-                <input
-                   class="form-control"
-                   type="text"
-                   placeholder="">
-                </div>
-                </div>
-                </div>
-                </div>
-              <br>
-              <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                    <h6>28. Do you have Children?</h6>
-                   <div class="form-group">
-                     <input type="radio" class="radioBtn"
-                       name="Radio" id="Radio" value="ABC"><span
-                       style="color:
-                       black;font-weight: 600;">No</span>
-                     <input class="radioBtn" type="radio"
-                       name="Radio" id="Radio" value="PQR">
-                     <span style="color:
-                       black;font-weight: 600;">Yes</span>
-                     <div class="Box" style="display:none">
-                        <div class="card-header pb-0">
-                           <h5 class="required">CHILDREN DETAILS:</h5>
+                       </div>
+                       </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <div class="mb-3">
+                            <div
+                               class="form-group">
+                            <label
+                               class="control-label required">52. Photocopy of Passport,VISA pages,Invitation
+                               Letter,Permission of your
+                               Organisation/Service,Official Approval Certificate
+                               for coming to Bangladesh (if any) are to be attached</label>
+                            <input class="form-control" type="file"
+                              aria-label="file example">
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                           <div class="col">
+                           <div class="mb-3">
+                           <div
+                              class="form-group">
+                           <label
+                              class="control-label required">53. Any other documents (as deemed necessary or as
+                              applicable) may be attached</label>
+                           <input class="form-control" type="file"
+                             aria-label="file example">
                            </div>
-                           <form class="form theme-form">
-                           <div class="card-body">
-                              <div class="row" x-data="handler()">
-                                  <div class="col">
-                                  <div class="mb-3">
-                                  <div class="form-group">
-                                 
-                                  <table class="table table-bordered
-                                     align-items-center table-sm">
-                                  <thead class="thead-light">
-                                  <tr>
-                                  <th>Ser</th>
-                                  <th>Name  </th>
-                                  <th>Age</th>
-                                  <th>Date   of   Birth</th>
-                                  <th>Class</th>
-                                  <th>Name of School / College / University</th>
-                                  <th>Remove</th>
-                                  </tr>
-                                  </thead>
-                                  <tbody>
-                                  <template x-for="(field, index) in fields"
-                                     :key="index">
-                                  <tr>
-                                  <td x-text="index + 1"></td>
-                                  <td><input x-model="field.txt1"
-                                     type="text" name="children_details_name[]"
-                                     class="form-control"></td>
-                                  <td><input x-model="field.txt2"
-                                     type="text" name="children_age[]"
-                                     class="form-control"></td>
-                                  <td><input x-model="field.txt3"
-                                     type="date" name="children_date_details[]"
-                                     class="form-control"></td>
-                                  <td><input x-model="field.txt4"
-                                     type="text" name="children_class[]"
-                                     class="form-control"></td>
-                                  <td><input x-model="field.txt5"
-                                     type="text"
-                                     name="children_school_college[]"
-                                     class="form-control"></td>
-                                  
-                                  <td><button type="button" class="btn
-                                     btn-danger btn-small"
-                                     @click="removeField(index)">&times;</button></td>
-                                  </tr>
-                                  </template>
-                                  </tbody>
-                                  <tfoot>
-                                  <tr>
-                                  <td colspan="4" class="text-right"><button
-                                     type="button" class="btn btn-info"
-                                     @click="addNewField()">+ Add </button></td>
-                                  </tr>
-                                  </tfoot>
-                                  </table>
-                                  </div>
-                                  </div>
-                                  </div>
-                                  </div>
-                           
-                           
-                           </div>
-                           </form>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-              <br>
-              <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <label class="control-label required">29. Mobile/Cell No in
-                       Bangladesh (if available)</label>
-                     <input class="form-control" type="text"
-                       placeholder="">
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <br>
-             <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <label class="control-label required">30. Mobile/Cell No
-                       (in
-                       Your Country)</label>
-                     <input class="form-control" type="text"
-                       placeholder="Mention Country Code">
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <br>
-             <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <label class="control-label required">31. Landline No (in
-                       Your Country)</label>
-                     <input class="form-control" type="text"
-                       placeholder="Mention Country Code">
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <br>
-             <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <label class="control-label required">32. Person to be
-                       Notified in Case of Emergency (in
-                       Your Country)</label>
-                     <input class="form-control" type="text"
-                       placeholder="">
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <br>
-             <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <label class="control-label required">33. Next of Kin (NOK)</label>
-                     <input class="form-control" type="text"
-                       placeholder="Name">
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <br>
-             <div class="row">
-               <div class="col">
-                 <div class="mb-3">
-                   <div class="form-group">
-                     <label class="control-label required">34. Relationship between User and NOK</label>
-                     <input class="form-control" type="text"
-                       placeholder="">
-                   </div>
-                 </div>
-               </div>
-             </div>
-             <br>
-             <div>
-               <label class="col-md-4 col-form-label required">35. Pen Picture
-                 (pl
-                 add additional sheets as necessary)</label>
-               <input class="form-control" type="file"
-                 aria-label="file example">
-
-             </div>
-
-            </form>
-            </div>
-            </div>
-            <!-- end spouse familiar -->
-             <!-- starts Parents-->
-         <div class="card">
-            <div class="card-header pb-0">
-            <h5 class="required">36. Name of Parents:</h5>
-            </div>
-            <div class="card-body">
-            <form>
-            
-           
-            <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="control-label"> Name of Father (Full Name) </label>
-            <input
-               class="form-control"
-               type="text"
-               placeholder="">
-            </div>
-            </div>
-            </div>
-            </div>
-            <br>
-            <div class="row">
-            <div class="col">
-            <div class="mb-3">
-            <div
-               class="form-group">
-            <label
-               class="control-label">Name of Mother (Full Name) </label>
-            <input
-               class="form-control"
-               type="text"
-               placeholder="">
-            </div>
-            </div>
-            </div>
+                       </div>
+                       </div>
+                       </div>
+                     
             </div>
             </form>
             </div>
-            </div>
-            <!-- end Parents -->
-           
-               <!-- publications details -->
-        
+            <!-- end publications details -->
             <a class="btn btn-primary" href=""
                       style="margin-left: 500px;">Save and Continue</a>
 

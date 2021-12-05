@@ -161,7 +161,7 @@
                           <li><a href="personal.html">Personal Profile</a></li>
                           <li><a href="education_and_qualification.html">Education and Qualification</a></li>
                           <li><a href="passport.html">Spouse and Childrens details</a></li>
-                      <li><a href="passport2.html">Details of Passport</a></li>
+                          <li><a href="passport2.html">Details of Passport</a></li>
                          
                         </ul>
                       </li>
@@ -189,7 +189,7 @@
          <div class="page-header">
          <div class="row">
          <div class="col-sm-6">
-         <h3>Personal Profile</h3>
+         <h3>EDUCATION AND QUALIFICATION</h3>
          </div>
          <div class="col-sm-6">
         
@@ -202,337 +202,217 @@
          <div class="row">
          <div class="col-sm-12">
          <!-- starts personal detils -->
+        
+         
+         <!-- sarts others -->
          <div class="card">
          <div class="card-header pb-0">
          <h5>GENERAL INFORMATION:</h5>
          </div>
          <div class="card-body">
-         <form>
-         <div class="mb-2">
-         <label
-            class="col-form-label required">1. Rank</label>
-         <select
-            class="js-example-basic-single
-            col-sm-12">
-         <optgroup label="">
-         <option
-            value="AL">Gen</option>
-         <option
-            value="WY">Lt
-         Gen</option>
-         <option
-            value="WY">Maj
-         Gen</option>
-         <option
-            value="WY">Brig
-         Gen</option>
-         <option
-            value="WY">Col</option>
-         </optgroup>
-         </select>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <input
-            type="radio"
-            class="radioBtn"
-            name="Radio"
-            id="Radio"
-            value="ABC"><span
-            style="color:
-            black;font-weight:
-            600;">Service
-         Number
-         Civil</span>
-         <input
-            class="radioBtn"
-            type="radio"
-            name="Radio"
-            id="Radio"
-            value="PQR">
-         <span
-            style="color:
-            black;font-weight:
-            600;">Service
-         Number
-         Military</span>
-         <div
-            class="Box"
-            style="display:none">
-         <div
-            class="form-group">
-         <label
-            class="col-form-label">Service</label>
-         <select
-            class="js-example-basic-single
-            col-sm-12">
-         <optgroup
-            label="">
-         <option
-            value="AL">Army</option>
-         <option
-            value="WY">Navy</option>
-         <option
-            value="WY">Air
-         Force</option>
-         <option
-         value="WY">Police</option>
-         <option
-         value="WY">Civil Service</option>
-         </optgroup>
-         </select>
-         </div>
-         </div>
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
+         <form class="needs-validation"
+            novalidate="">
+         <div class="row"
+            x-data="handler()">
          <div class="col">
          <div class="mb-3">
          <div
             class="form-group">
          <label
-            class="control-label required">2. Batch/Course
-         Number</label>
-         <input
-            class="form-control"
+            class="control-label required">18. Food
+         Habits</label>
+         <table
+            class="table
+            table-bordered
+            align-items-center
+            table-sm">
+         <thead
+            class="thead-light">
+         <tr>
+         <th>Ser</th>
+         <th>Food
+         Preference</th>
+         <th>Food
+         Restriction</th>
+         <th>Remove</th>
+         </tr>
+         </thead>
+         <tbody>
+         <template
+            x-for="(field,
+            index)
+            in
+            fields"
+            :key="index">
+         <tr>
+         <td
+            x-text="index
+            +
+            1"></td>
+         <td><input
+            x-model="field.txt1"
             type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label required">3. Name
-         in
-         Capital
-         (As in
-         Service
-         List)</label>
-         <input
-            class="form-control"
+            name="preferred[]"
+            class="form-control"></td>
+         <td><input
+            x-model="field.txt2"
             type="text"
-            placeholder="">
+            name="restriction[]"
+            class="form-control"></td>
+         <td><button
+            type="button"
+            class="btn
+            btn-danger
+            btn-small"
+            @click="removeField(index)">&times;</button></td>
+         </tr>
+         </template>
+         </tbody>
+         <tfoot>
+         <tr>
+         <td
+            colspan="4"
+            class="text-right"><button
+            type="button"
+            class="btn
+            btn-info"
+            @click="addNewField()">+
+         Add
+         </button></td>
+         </tr>
+         </tfoot>
+         </table>
          </div>
          </div>
          </div>
          </div>
          <br>
-         <div class="row">
+         <div class="row"
+            x-data="handler()">
          <div class="col">
          <div class="mb-3">
          <div
             class="form-group">
          <label
-            class="control-label required">4. Short
-         Name (As
-         Nameplate)</label>
-         <input
-            class="form-control"
+            class="control-label required">19. Service</label>
+         <table
+            class="table
+            table-bordered
+            align-items-center
+            table-sm">
+         <thead
+            class="thead-light">
+         <tr>
+         <th>Ser</th>
+         <th>Service Decoration/Award</th>
+         <th>Remove</th>
+         </tr>
+         </thead>
+         <tbody>
+         <template
+            x-for="(field,
+            index)
+            in
+            fields"
+            :key="index">
+         <tr>
+         <td
+            x-text="index
+            +
+            1"></td>
+         <td><input
+            x-model="field.txt1"
             type="text"
-            placeholder="">
+            name="decoration_award[]"
+            class="form-control"></td>
+         <td><button
+            type="button"
+            class="btn
+            btn-danger
+            btn-small"
+            @click="removeField(index)">&times;</button></td>
+         </tr>
+         </template>
+         </tbody>
+         <tfoot>
+         <tr>
+         <td
+            colspan="4"
+            class="text-right"><button
+            type="button"
+            class="btn
+            btn-info"
+            @click="addNewField()">+
+         Add
+         </button></td>
+         </tr>
+         </tfoot>
+         </table>
          </div>
          </div>
          </div>
          </div>
-         <br>
-         <div class="row">
+         <div class="row"
+            x-data="handler()">
          <div class="col">
          <div class="mb-3">
          <div
             class="form-group">
          <label
-            class="control-label required">5. Name
-         in
-         Bangali
-         (As in
-         Service
-         List)
-         (For
-         Bangladeshi
-         Course
-         Member
-         only)</label>
-         <input
-            class="form-control"
+            class="control-label required">20. Hobbies</label>
+         <table
+            class="table
+            table-bordered
+            align-items-center
+            table-sm">
+         <thead
+            class="thead-light">
+         <tr>
+         <th>Ser</th>
+         <th>Hobbies</th>
+         <th>Remove</th>
+         </tr>
+         </thead>
+         <tbody>
+         <template
+            x-for="(field,
+            index)
+            in
+            fields"
+            :key="index">
+         <tr>
+         <td
+            x-text="index
+            +
+            1"></td>
+         <td><input
+            x-model="field.txt1"
             type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="col-md-4
-            col-form-label required">6. Date
-         Of
-         Commission
-         Service
-         Entry</label>
-         <input
-            class="form-control
-            digits"
-            type="date">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="col-md-4
-            col-form-label required">7. Date
-         Of
-         Promotion
-         to
-         Present
-         Rank</label>
-         <input
-            class="form-control
-            digits"
-            type="date">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="col-md-4
-            col-form-label required">8. Date
-         Of
-         Birth</label>
-         <input
-            class="form-control
-            digits"
-            type="date">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label required">9. Nationality</label>
-         <input
-            class="form-control"
-            type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label required">10. Blood
-         Group</label>
-         <input
-            class="form-control"
-            type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label required">11. Height
-         in CM</label>
-         <input
-            class="form-control"
-            type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label required">12. Religion</label>
-         <input
-            class="form-control"
-            type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="control-label required">13. Marital
-         Status</label>
-         <input
-            class="form-control"
-            type="text"
-            placeholder="">
-         </div>
-         </div>
-         </div>
-         </div>
-         <br>
-         <div class="row">
-         <div class="col">
-         <div class="mb-3">
-         <div
-            class="form-group">
-         <label
-            class="col-md-4
-            col-form-label required">14. Date
-         Of
-         Marriage</label>
-         <input
-            class="form-control
-            digits"
-            type="date">
+            name="hobbies[]"
+            class="form-control"></td>
+         <td><button
+            type="button"
+            class="btn
+            btn-danger
+            btn-small"
+            @click="removeField(index)">&times;</button></td>
+         </tr>
+         </template>
+         </tbody>
+         <tfoot>
+         <tr>
+         <td
+            colspan="4"
+            class="text-right"><button
+            type="button"
+            class="btn
+            btn-info"
+            @click="addNewField()">+
+         Add
+         </button></td>
+         </tr>
+         </tfoot>
+         </table>
          </div>
          </div>
          </div>
@@ -540,23 +420,24 @@
          </form>
          </div>
          </div>
-         <!-- end personal details -->
-         <!-- permanent Address -->
+         <!-- end others -->
+         <!-- high school-->
          <div class="card">
          <div class="card-header pb-0">
-         <h5>15. PERMANENT ADDRESS:</h5>
+         <h5>EDUCATION:</h5>
          </div>
          <form class="form theme-form">
          <div class="card-body">
          <div class="row">
          <div class="col">
+         
+            <h6>21. High School Level or Equivalent:</h6>
+        <br>
          <div class="mb-3
             row">
          <label
             class="col-sm-3
-            col-form-label required">House
-         No/Village
-         </label>
+            col-form-label required">Name of Exam</label>
          <div
             class="col-sm-9">
          <input
@@ -568,8 +449,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label required">Road
-         No/Union</label>
+            col-form-label required">Year</label>
          <div
             class="col-sm-9">
          <input
@@ -581,8 +461,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label required">Sector/Police
-         Station</label>
+            col-form-label required">Name of Institution</label>
          <div
             class="col-sm-9">
          <input
@@ -594,64 +473,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label required">District/Province</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Telephone
-         No(Land
-         Phone)</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Mobile
-         Phone No
-         1(Used in
-         Own Country)</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Mobile
-         Phone No
-         2(Used in
-         Own Country)</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Email
-         Address</label>
+            col-form-label required">ReSult</label>
          <div
             class="col-sm-9">
          <input
@@ -664,30 +486,24 @@
          </div>
          </form>
          </div>
-         <div class="mb-0">
-            <div class="form-check form-check-inline checkbox checkbox-primary">
-              <input class="form-check-input" id="inline-form-1" type="checkbox">
-              <label class="form-check-label" for="inline-form-1">Same As parmanent</label>
-            </div>
-          </div>
-         <!-- end permanent -->
-         <!-- present Address -->
+         <!-- end high schol -->
+         <!-- college -->
          <div class="card">
          <div class="card-header pb-0">
-         <h5 class="required">16. PRESENT ADDRESS:</h5>
+         <h5>EDUCATION:</h5>
+         </div>
+         <form class="form theme-form">
+         <div class="card-body">
+         <div class="row">
+         <div class="col">
+            <h6>22. College Level or Equivalent</h6>
         
-         </div>
-         <form class="form theme-form">
-         <div class="card-body">
-         <div class="row">
-         <div class="col">
+         <br>
          <div class="mb-3
             row">
          <label
             class="col-sm-3
-            col-form-label">House
-         No/Village
-         </label>
+            col-form-label required">Name of Exam</label>
          <div
             class="col-sm-9">
          <input
@@ -699,8 +515,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Road
-         No/Union</label>
+            col-form-label required">Year</label>
          <div
             class="col-sm-9">
          <input
@@ -712,8 +527,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">Sector/Police
-         Station</label>
+            col-form-label required">Name of Institution</label>
          <div
             class="col-sm-9">
          <input
@@ -725,64 +539,7 @@
             row">
          <label
             class="col-sm-3
-            col-form-label">District/Province</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label">Telephone
-         No(Land
-         Phone)</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label">Mobile
-         Phone No
-         1(Used in
-         Own Country)</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label">Mobile
-         Phone No
-         2(Used in
-         Own Country)</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label">Email
-         Address</label>
+            col-form-label required">ReSult</label>
          <div
             class="col-sm-9">
          <input
@@ -795,89 +552,203 @@
          </div>
          </form>
          </div>
-         <!-- end present -->
-         <!-- contact Address -->
+         <!-- end college -->
+         <!-- sarts qualification -->
          <div class="card">
          <div class="card-header pb-0">
-         <h5>17. CONTACT ADDRESS at Home in
-         Case Of Emergency:</h5>
+         <h5>QUALIFICATION:</h5>
          </div>
-         <form class="form theme-form">
          <div class="card-body">
-         <div class="row">
+         <form class="needs-validation"
+            novalidate="">
+         <div class="row" x-data="handler()">
          <div class="col">
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Name
-         </label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
+         <div class="mb-3">
+         <div class="form-group">
+         <label class="control-label required">23. List of University Degrees of Equivalent Qualification</label>
+         <table class="table table-bordered
+            align-items-center table-sm">
+         <thead class="thead-light">
+         <tr>
+         <th>Ser</th>
+         <th>Name of Degree</th>
+         <th>Main Course of Study</th>
+         <th>Name of University</th>
+         <th>Academic Year</th>
+         <th>Result</th>
+         <th>Remove</th>
+         </tr>
+         </thead>
+         <tbody>
+         <template x-for="(field, index) in fields"
+            :key="index">
+         <tr>
+         <td x-text="index + 1"></td>
+         <td><input x-model="field.txt1"
+            type="text" name="degree[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt2"
+            type="text" name="course_of_study[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt3"
+            type="text" name="of_university[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt4"
+            type="text" name="academic_year[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt5"
+            type="text"
+            name="result[]"
+            class="form-control"></td>
+         <td><button type="button" class="btn
+            btn-danger btn-small"
+            @click="removeField(index)">&times;</button></td>
+         </tr>
+         </template>
+         </tbody>
+         <tfoot>
+         <tr>
+         <td colspan="4" class="text-right"><button
+            type="button" class="btn btn-info"
+            @click="addNewField()">+ Add </button></td>
+         </tr>
+         </tfoot>
+         </table>
          </div>
          </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Relation</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
          </div>
          </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Telephone
-         no with
-         District/Province
-         Code</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Mobile
-         Phone No 1</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
-         </div>
-         <div class="mb-3
-            row">
-         <label
-            class="col-sm-3
-            col-form-label required">Mobile
-         Phone No 2</label>
-         <div
-            class="col-sm-9">
-         <input
-            class="form-control"
-            type="text">
-         </div>
+         <br>
+         <div class="row" x-data="handler()">
+         <div class="col">
+         <div class="mb-3">
+         <div class="form-group">
+         <label class="control-label required">24. List of all Professional Courses Attended</label>
+         <table class="table table-bordered
+            align-items-center table-sm">
+         <thead class="thead-light">
+         <tr>
+         <th>Ser</th>
+         <th>Name of course </th>
+         <th>Name of Institution</th>
+         <th>Location of Institution</th>
+         <th>Year</th>
+         <th>Result</th>
+         <th>Remarks</th>
+         <th>Remove</th>
+         </tr>
+         </thead>
+         <tbody>
+         <template x-for="(field, index) in fields"
+            :key="index">
+         <tr>
+         <td x-text="index + 1"></td>
+         <td><input x-model="field.txt1"
+            type="text" name="of_courses[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt2"
+            type="text" name="of_institution[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt3"
+            type="text" name="location_institute[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt4"
+            type="text" name="courses_year[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt5"
+            type="text"
+            name="courses_result[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt6"
+            type="text"
+            name="courses_remarks[]"
+            class="form-control"></td>
+         <td><button type="button" class="btn
+            btn-danger btn-small"
+            @click="removeField(index)">&times;</button></td>
+         </tr>
+         </template>
+         </tbody>
+         <tfoot>
+         <tr>
+         <td colspan="4" class="text-right"><button
+            type="button" class="btn btn-info"
+            @click="addNewField()">+ Add </button></td>
+         </tr>
+         </tfoot>
+         </table>
          </div>
          </div>
          </div>
          </div>
          </form>
          </div>
-        
+         </div>
+         <!-- end qualification -->
+         <!-- sarts qualification -->
+         <div class="card">
+         <div class="card-header pb-0">
+         <h5>EMPLOYMENT:</h5>
+         </div>
+         <div class="card-body">
+         <form class="needs-validation"
+            novalidate="">
+         <div class="row" x-data="handler()">
+         <div class="col">
+         <div class="mb-3">
+         <div class="form-group">
+         <label class="control-label required">25. State Employment you had (in reverse order for last 10 years)</label>
+         <table class="table table-bordered
+            align-items-center table-sm">
+         <thead class="thead-light">
+         <tr>
+         <th>Ser</th>
+         <th>Designation</th>
+         <th>Formation / Headquarters / Department</th>
+         <th>Duration From</th>
+         <th>Duration To</th>
+         <th>Remove</th>
+         </tr>
+         </thead>
+         <tbody>
+         <template x-for="(field, index) in fields"
+            :key="index">
+         <tr>
+         <td x-text="index + 1"></td>
+         <td><input x-model="field.txt1"
+            type="text" name="desihnation_employment[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt2"
+            type="text" name="formation_department[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt3"
+            type="date" name="from_employment[]"
+            class="form-control"></td>
+         <td><input x-model="field.txt4"
+            type="date" name="to_employment[]"
+            class="form-control"></td>
+         <td><button type="button" class="btn
+            btn-danger btn-small"
+            @click="removeField(index)">&times;</button></td>
+         </tr>
+         </template>
+         </tbody>
+         <tfoot>
+         <tr>
+         <td colspan="4" class="text-right"><button
+            type="button" class="btn btn-info"
+            @click="addNewField()">+ Add </button></td>
+         </tr>
+         </tfoot>
+         </table>
+         </div>
+         </div>
+         </div>
+         </div>
+         </form>
+         </div>
+         </div>
+         <!-- end employment -->
          <a class="btn btn-primary" href=""
          style="margin-left: 500px;">Save and Continue</a>
 
